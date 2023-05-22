@@ -1,0 +1,2 @@
+This is an ephemeral debug container.
+All changes made to it are discarded when when it restarts.
