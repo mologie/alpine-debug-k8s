@@ -9,6 +9,7 @@ RUN apk add --no-cache \
         fzf-zsh-plugin \
         htop \
         ncdu \
+        nmap \
         openssh \
         rsync rsync-zsh-completion \
         the_silver_searcher the_silver_searcher-zsh-completion \
