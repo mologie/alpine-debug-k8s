@@ -1,4 +1,4 @@
-FROM alpine:3.19
+FROM alpine:3.20.3
 ARG TARGETARCH
 
 WORKDIR /root
@@ -39,7 +39,7 @@ COPY motd /etc/motd
 COPY sshd_config /etc/ssh/sshd_config
 
 # use ZSH for SSH sessions
-RUN sed -i 's|root:x:0:0:root:/root:/bin/ash|root:x:0:0:root:/root:/bin/zsh|' /etc/passwd
+RUN sed -i 's|root:x:0:0:root:/root:/bin/sh|root:x:0:0:root:/root:/bin/zsh|' /etc/passwd
 
 # entrypoint script spawns a shell or an SSH server
 COPY entrypoint.sh /entrypoint.sh
